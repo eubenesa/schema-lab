@@ -53,4 +53,6 @@ const server = new ApolloServer({
   mockEntireSchema: false
 });
 
-server.listen().then(console.log(`Server running on port 4000`));
+server
+  .listen()
+  .then(({ port }) => console.log(`Server running on port ${port}`));
